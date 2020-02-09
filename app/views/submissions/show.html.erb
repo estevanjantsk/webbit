@@ -15,5 +15,21 @@
   <%= @submission.url %>
 </p>
 
+<%
+=begin%>
+ <%= debug(@submission.submission_image) %> 
+<%
+=end%>
+
+<p>
+  <strong>Submission Image:</strong>
+  <%= image_tag @submission.submission_image.thumb.url %>
+</p>
+
+<p>
+  <strong>Submission Video:</strong>
+  <%= @submission.submission_video %>
+</p>
+
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
 <%= link_to 'Back', submissions_path %>
