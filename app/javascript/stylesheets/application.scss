@@ -1,7 +1,11 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
 
-@import "tailwindcss/utilities";
-
+@import "components/animations";
+@import "components/base";
 @import "components/icons";
+@import "components/forms";
+@import "components/buttons";
+@import "components/cards";
+
+@import "tailwindcss/utilities";
