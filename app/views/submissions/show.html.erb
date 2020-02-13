@@ -22,13 +22,11 @@
 =end%>
 
 <p>
-  <strong>Submission Image:</strong>
-  <%= image_tag @submission.submission_image.thumb.url %>
+  <%= image_tag @submission.submission_image.large.url, width: 400 if @submission.submission_image.present? %>
 </p>
 
 <p>
-  <strong>Submission Video:</strong>
-  <%= @submission.submission_video %>
+  <%= video_tag @submission.submission_video if @submission.submission_video.present? %>
 </p>
 
 <%= link_to 'Edit', edit_submission_path(@submission) %> |
