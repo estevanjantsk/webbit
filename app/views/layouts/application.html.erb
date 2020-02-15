@@ -126,6 +126,6 @@
       </div>
     </nav>
 
-    <%= yield %>
+    <%= content_for?(:content) ? yield(:content) : yield %>
   </body>
 </html>
