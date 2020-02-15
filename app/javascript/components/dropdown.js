@@ -5,7 +5,7 @@ document.addEventListener("turbolinks:load", () => {
   function dropdown() {
     dropDownLinks.forEach(function(dropdown) {
       dropdown.addEventListener("click", e => {
-        e.stopPropagation();
+        // e.stopPropagation();
         const dropdownTarget = dropdown.nextElementSibling;
 
         if (e.target.nextElementSibling != null) {

@@ -17,12 +17,14 @@
       <%= render_svg "icons/view", styles: "w-4 fill-current text-gray-500", title: "View" %>
     <% end %>
 
-    <%= link_to edit_community_path(community), class: "no-underline ml-2" do %>
-      <%= render_svg "icons/edit", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
-    <% end %>
+    <% if author_of(community) %>
+      <%= link_to edit_community_path(community), class: "no-underline ml-2" do %>
+        <%= render_svg "icons/edit", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
+      <% end %>
 
-    <%= link_to community, class: "no-underline ml-2", method: :delete, data: { confirm: "Are you sure?" } do %>
-      <%= render_svg "icons/delete", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
+      <%= link_to community, class: "no-underline ml-2", method: :delete, data: { confirm: "Are you sure?" } do %>
+        <%= render_svg "icons/delete", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
+      <% end %>
     <% end %>
   </div>
 

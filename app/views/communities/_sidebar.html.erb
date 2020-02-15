@@ -6,11 +6,9 @@
         <span class="ml-1">w/<%= community.name %></span>
       </span>
       
-      <% if author_of(community) %>
-        <%= link_to edit_community_path(community), class: "no-underline mr-2" do %>
-          <%= render_svg "icons/edit", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
-        <% end %>
-      <% end %>
+      <%= link_to edit_community_path(community), class: "no-underline mr-2" do %>
+        <%= render_svg "icons/edit", styles: "w-4 fill-current text-gray-500", title: "Edit" %>
+      <% end if author_of(community) %>
     </div>
 
     <h3 class="m-0 leading-tight text-lg"><%= community.title %></h3>
