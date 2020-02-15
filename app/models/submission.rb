@@ -3,6 +3,7 @@ class Submission < ApplicationRecord
   mount_uploader :submission_video, SubmissionVideoUploader
 
   belongs_to :user
+  belongs_to :community
 
   # validations
   validates :title, presence: true
