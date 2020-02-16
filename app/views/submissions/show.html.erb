@@ -30,8 +30,12 @@
             <%= link_to "Sign up", new_user_registration_path, class: "link" %> to comment.
           </p>
         <% else %>
-          <%# render "comments/form" %>
+          <%= render "comments/form" %>
         <% end %>
+
+        <div id="comments" class="mt-6 border-t border-gray-200">
+          <%= render @submission.comments %>
+        </div>
 
       </div>
 
