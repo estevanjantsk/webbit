@@ -15,7 +15,7 @@ class SubmissionsController < ApplicationController
 
   # GET /submissions/new
   def new
-    @submission = current_user.submissions.build
+    @submission = Submission.new
   end
 
   # GET /submissions/1/edit
