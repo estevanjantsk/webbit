@@ -10,6 +10,7 @@ require("channels");
 
 import "components/tabs";
 import "components/dropdown";
+import "components/modal";
 
 import "stylesheets/application";
 

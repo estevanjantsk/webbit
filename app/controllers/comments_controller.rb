@@ -28,6 +28,9 @@ class CommentsController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.js # render edit.js.erb
+    end
   end
 
   def update
