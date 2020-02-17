@@ -99,7 +99,7 @@
                       My Stuff
                     </h5>
                     <li>
-                      <%= link_to  "#", class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block
+                      <%= link_to  profile_path(current_user), class: "hover:bg-purple-500 hover:text-white text-gray-700 no-underline block
                                                 py-2 px-4 flex items-center text-sm" do %>
                         <%= render_svg "icons/user", styles: "icon-md fill-current text-gray-600 mr-3" %> My Profile
                       <% end %>
