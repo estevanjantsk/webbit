@@ -2,7 +2,7 @@ var commentVote = document.querySelector(
   "#comment-<%= @comment.id %> .js-votes"
 );
 var dynamicNotice = document.querySelector(".js-notice");
-commentVote.innerHTML = "<%= escape_javascript(@comment.total_vote_count) %>";
+commentVote.innerHTML = "<%= escape_javascript(@comment.total_votes_count) %>";
 
 dynamicNotice.innerHTML = `
   <div class="bg-white shadow rounded-lg animate fadeInUp">
