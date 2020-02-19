@@ -12,6 +12,7 @@ class SubmissionsController < ApplicationController
   # GET /submissions/1.json
   def show
     @comment = Comment.new
+    @community = @submission.community
   end
 
   # GET /submissions/new
