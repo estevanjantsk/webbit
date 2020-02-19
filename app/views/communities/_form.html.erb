@@ -31,8 +31,6 @@
     <%= form.text_area :sidebar, class: "input" %>
   </div>
 
-  <%= form.hidden_field :user_id, value: current_user.id if user_signed_in? %>
-
   <div class="mb-6">
     <%= form.submit class: "btn btn-purple btn-small" %>
   </div>

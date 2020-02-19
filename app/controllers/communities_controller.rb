@@ -25,7 +25,8 @@ class CommunitiesController < ApplicationController
   # POST /communities
   # POST /communities.json
   def create
-    @community = current_user.communities.build(community_params)
+    @community = Community.new(community_params)
+    @community.user = current_user
 
     respond_to do |format|
       if @community.save
@@ -70,6 +71,6 @@ class CommunitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def community_params
-      params.require(:community).permit(:name, :title, :description, :sidedar)
+      params.require(:community).permit(:name, :title, :description, :sidebar)
     end
 end
