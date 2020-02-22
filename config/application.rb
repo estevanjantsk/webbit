@@ -15,6 +15,10 @@ module Webbit
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.active_job.queue_adapter = :sidekiq
+    # bundle exec sidekiq -q default -q mailers
+
     config.generators do |g|
       g.scaffold_stylesheet false
     end
