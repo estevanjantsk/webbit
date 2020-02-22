@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :communities do
     resource :subscriptions
   end
+
+  get "submissions/unsubscribe/:unsubscribe_hash" => "submissions#unsubscribe", :as =>
+  "comment_unsubscribe"
   
   resources :submissions do
     member do
