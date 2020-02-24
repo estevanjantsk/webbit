@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "submissions/unsubscribe/:unsubscribe_hash" => "submissions#unsubscribe", :as =>
   "comment_unsubscribe"
+
+  get :search, controller: "application"
   
   resources :submissions do
     member do
