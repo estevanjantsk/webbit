@@ -5,7 +5,7 @@
   <% if @submissions.exists? %>
     <%= render @submissions %>
   <% else %>
-    <div class="pt-10 text-center">
+    <div class="py-10 text-center">
       <%= render_svg "icons/empty", styles: "fill-current text-gray-400 m-auto" %>
       <p class="mb-4">Wow such empty...</p>
       <%= link_to "Create a new submission", new_submission_path, class: "btn btn-purple btn-small inline-block" %>
