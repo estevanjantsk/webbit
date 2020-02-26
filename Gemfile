@@ -37,6 +37,7 @@ gem 'inline_svg', '~> 1.6'
 gem 'acts_as_votable', '~> 0.12.1'
 gem 'sidekiq', '~> 6.0', '>= 6.0.5'
 gem 'ransack', '~> 2.3', '>= 2.3.2'
+gem 'stripe', '~> 5.16'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
