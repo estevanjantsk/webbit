@@ -9,6 +9,7 @@ class PremiumController < ApplicationController
 
   def create
     Stripe.api_key = Rails.application.credentials.stripe_api_key
+
     plan_id = Rails.application.credentials.webbit_premium_plan_id
     plan = Stripe::Plan::retrieve(plan_id)
     token = params[:stripeToken]

@@ -21,3 +21,4 @@ Each model will be responsible for different data throught the app
 ## Where to Go Next
 
 - BUILD something!!! ;)
+- EDITOR="code --wait" rails credentials:edit --environment development
