@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :users, only: [:show], as: "profiles", path: "profile"
+  resources :premium
 
   root to: "submissions#index"
 end
