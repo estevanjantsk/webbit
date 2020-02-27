@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+  extend FriendlyId
   before_create :add_unsubscribe_hash
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :subscribed_submissions, through: :communities, source: :submissions
 
   acts_as_voter
+
+  friendly_id :username, use: :slugged
 
   private
 
