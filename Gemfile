@@ -30,7 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # Custom webbit gems
 gem 'devise', '~> 4.7', '>= 4.7.1'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'validate_url', '~> 1.0', '>= 1.0.8'
 gem 'inline_svg', '~> 1.6'
